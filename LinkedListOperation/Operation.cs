@@ -9,6 +9,7 @@ namespace LinkedListOperation
         //Creating a head node to point the first element
         public Node head;
         //Creating a method to insert last 
+
         public void InsertLast(int new_data)
         {
             Node new_node = new Node(new_data);
@@ -21,9 +22,16 @@ namespace LinkedListOperation
                 Node lastNode = GetLastNode();
                 lastNode.next = new_node;
             }
-            Console.WriteLine("Inserted into list " + new_node.data);
+            Console.WriteLine("Inserted into list from last " + new_node.data);
         }
-
+        //Insert Front 
+        public void InsertFront(int new_data)
+        {
+            Node new_node = new Node(new_data);
+            new_node.next = this.head;
+            this.head = new_node;
+            Console.WriteLine("Inserted the list in front " + new_node.data);
+        }
         public Node GetLastNode()
         {
             Node temp = this.head;
@@ -32,6 +40,34 @@ namespace LinkedListOperation
                 temp = temp.next;
             }
             return temp;
+        }
+        //Appending a new node
+        public void Append(int new_data)
+        {
+            Node new_node = new Node(new_data);
+            new_node.data = new_data;//assign data element
+            new_node.next = null;//assign null to next of new node
+            //check linkedlist empty 
+            if (head == null)
+            {
+                head = new_node;
+
+            }
+            else
+            {
+                //traverse to last node
+                Node temp = new Node(new_data);
+                temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = new_node;
+
+            }
+
+
+
         }
         //Display the nodes
         public void Display()
