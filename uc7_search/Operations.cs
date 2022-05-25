@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace LinkedListOperation
+namespace uc7_search
 {
     class Operations
     {
@@ -100,6 +102,59 @@ namespace LinkedListOperation
 
             }
         }
+        //Deleting first element
+        //Deleting the first node
+        public Node DeleteFirst()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.next;
+            return this.head;
+        }
+        //Delete Last element
+        public Node DeleteLast()
+        {
+            Node newNode = this.head;
+            if (this.head == null)
+            {
+                return null;
+            }
+            if (this.head.next == null)
+            {
+                this.head = null;
+                return null;
+            }
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            newNode.next = null;
+            return newNode;
+
+        }
+        //Searching the particular element in linked list
+        public Node Search(int value)
+        {
+            Node temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    Console.WriteLine("Element found.. " + value);
+                    return temp;
+                }
+                temp = temp.next;
+
+            }
+            Console.WriteLine("Element not found!!!!!!!!");
+            return default;
+        }
+
+
+
+
         //Display the nodes
         public void Display()
         {
