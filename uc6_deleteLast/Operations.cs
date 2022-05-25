@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace LinkedListOperation
+namespace uc6_deleteLast
 {
     class Operations
     {
@@ -47,7 +49,7 @@ namespace LinkedListOperation
             Node new_node = new Node(new_data);
             new_node.data = new_data;//assign data element
             new_node.next = null;//assign null to next of new node
-            //check linkedlist empty 
+                                 //check linkedlist empty 
             if (head == null)
             {
                 head = new_node;
@@ -100,6 +102,42 @@ namespace LinkedListOperation
 
             }
         }
+        //Deleting first element
+        //Deleting the first node
+        public Node DeleteFirst()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.next;
+            return this.head;
+        }
+        //Delete Last element
+        public Node DeleteLast()
+        {
+            Node newNode = this.head;
+            if (this.head == null)
+            {
+                return null;
+            }
+            if (this.head.next == null)
+            {
+                this.head = null;
+                return null;
+            }
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            newNode.next = null;
+            return newNode;
+
+        }
+
+
+
+
         //Display the nodes
         public void Display()
         {
@@ -119,6 +157,7 @@ namespace LinkedListOperation
                 }
             }
         }
+
 
     }
 }
