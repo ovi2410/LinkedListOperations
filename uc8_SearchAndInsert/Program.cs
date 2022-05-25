@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
 using System;
-using uc7_search;
+using uc8_SearchAndInsert;
 
 namespace LinkedListOperation
 {
@@ -16,6 +16,7 @@ namespace LinkedListOperation
             Console.WriteLine("**********4.Delete the First Element***********");
             Console.WriteLine("**********5.Delete the Last Element***********");
             Console.WriteLine("**********6.Searching the Element***********");
+            Console.WriteLine("**********7.search nd insert element***********");
             Console.WriteLine("Enter the option!!!");
             int num = Convert.ToInt32(Console.ReadLine());
             //Creating object for Custom Linked list class
@@ -60,6 +61,15 @@ namespace LinkedListOperation
                     obj.InsertLast(70);
                     obj.Search(56);
                     break;
+                case 7:
+
+                    obj.InsertLast(56);
+                    obj.InsertLast(30);
+                    obj.InsertLast(70);
+                    obj.Insert(30, 40);
+                    obj.Display();
+                    break;
+
 
 
             }
