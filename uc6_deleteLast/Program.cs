@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
 using System;
-using uc5_deletefirst;
+using uc6_deleteLast;
 
 namespace LinkedListOperation
 {
@@ -19,7 +19,7 @@ namespace LinkedListOperation
             Console.WriteLine("Enter the option!!!");
             int num = Convert.ToInt32(Console.ReadLine());
             //Creating object for Custom Linked list class
-            Operations obj = new uc5_deletefirst.Operations();
+            Operations obj = new Operations();
             switch (num)
             {
                 case 1:
@@ -45,6 +45,13 @@ namespace LinkedListOperation
                     obj.InsertFront(30);
                     obj.InsertFront(70);
                     obj.DeleteFirst();
+                    obj.Display();
+                    break;
+                case 5:
+                    obj.InsertLast(56);
+                    obj.InsertLast(30);
+                    obj.InsertLast(70);
+                    obj.DeleteLast();
                     obj.Display();
                     break;
 
