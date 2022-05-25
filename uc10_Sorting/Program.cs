@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
 using System;
-using uc9_searchAnddelete;
+using uc10_Sorting;
 
 namespace LinkedListOperation
 {
@@ -17,6 +17,7 @@ namespace LinkedListOperation
             Console.WriteLine("**********5.Delete the Last Element***********");
             Console.WriteLine("**********6.Searching the Element***********");
             Console.WriteLine("**********8.search and delete*******");
+            Console.WriteLine("*********9.sorting**************");
             Console.WriteLine("Enter the option!!!");
             int num = Convert.ToInt32(Console.ReadLine());
             //Creating object for Custom Linked list class
