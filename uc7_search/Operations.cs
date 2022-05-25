@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace uc6_deleteLast
+namespace uc7_search
 {
     class Operations
     {
@@ -49,7 +49,7 @@ namespace uc6_deleteLast
             Node new_node = new Node(new_data);
             new_node.data = new_data;//assign data element
             new_node.next = null;//assign null to next of new node
-                                 //check linkedlist empty 
+            //check linkedlist empty 
             if (head == null)
             {
                 head = new_node;
@@ -134,6 +134,23 @@ namespace uc6_deleteLast
             return newNode;
 
         }
+        //Searching the particular element in linked list
+        public Node Search(int value)
+        {
+            Node temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    Console.WriteLine("Element found.. " + value);
+                    return temp;
+                }
+                temp = temp.next;
+
+            }
+            Console.WriteLine("Element not found!!!!!!!!");
+            return default;
+        }
 
 
 
@@ -157,7 +174,6 @@ namespace uc6_deleteLast
                 }
             }
         }
-
 
     }
 }
