@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace uc8_SearchAndInsert
+namespace uc9_searchAnddelete
 {
     class Node
     {
